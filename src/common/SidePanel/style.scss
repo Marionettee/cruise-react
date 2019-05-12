@@ -1,0 +1,49 @@
+.side-panel{
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    z-index: 50;
+    background: #2D4054;
+    .side-wrap{
+        height: 100%;
+        position: relative;
+    }
+    .menu-list{
+        padding-top: 10px;
+        color: #FFF;
+        li{
+            padding: 14px 30px;
+            span{
+                padding-right: 10px;
+            }
+        }
+    }
+    .history{
+        position: absolute;
+        bottom: 80px;
+        padding: 25px;                
+        .history-title{
+            font-size: 24px;
+            color: #CCC;
+            margin-bottom: 20px;
+        }
+        ul{
+            li{
+                margin-top: 10px;
+                font-size: 12px;
+                color: #999;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                list-style: disc inside;
+                a:hover{
+                    color: #00B4CF;
+                }
+            }
+        }
+    }
+}
+.menu-select{
+    color: #00B4CF;
+    background: #435466;
+}

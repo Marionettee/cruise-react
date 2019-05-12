@@ -1,0 +1,81 @@
+.header{
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background-color: #FFF;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+    .header-body{
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        height: 60px;
+        line-height: 60px;
+        display: flex;
+        text-align: center;
+        -webkit-box-align: center;
+        .menu{
+            width: 90px;
+            .menu-btn{
+
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .avatar{
+            width: 90px;
+            position: relative;
+            .ava-scope{               
+                width: 100%;
+                height: 100%;
+                -webkit-box-pack: inherit;
+                display: flex;
+                padding-top: 10px;          
+                div{
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    img{
+                        width: 40px;
+                    }
+                }
+                span{
+                    font-size: 20px;
+                    margin: 10px 0 0 10px;
+                }
+            }
+            .userMenu{
+                width: 150px;
+                background: #fff;
+                position: absolute;
+                right: 20px;
+                top: 70px;
+                padding: 15px 0;
+                user-select: none;
+                -webkit-user-select: none;
+                box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.3);
+                li{
+                    height: 40px;
+                    line-height: 40px;
+                    padding: 0 20px;
+                    text-align: left;
+                    span{
+                        margin-right: 15px;
+                    }
+                }
+                li:hover{
+                    background: #EFEFEF;
+                }
+            }
+        }
+        .header-title{
+            padding-top: 10px;
+            height: 60px;
+            flex: 1;
+            img{
+                width: 120px;
+            }
+        }
+    }
+}

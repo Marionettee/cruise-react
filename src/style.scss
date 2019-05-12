@@ -1,0 +1,15 @@
+.page{
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    background: #EFEFEF;
+    color: #2D4054;
+    min-height: 100%;
+    .main{
+        max-width:1200px; 
+        margin:0 auto;
+        padding: 60px 0 20px;
+        .main-panel{
+            padding: 20px 20px 20px 270px;
+        }
+    }
+}

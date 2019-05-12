@@ -1,0 +1,74 @@
+.status{
+    display: flex;
+    .absolute-pos{
+        position: relative;
+        div{
+            position: absolute;
+            color:#fff;
+        }
+        .icon-cog{
+            animation: rond 2s infinite linear;
+            -webkit-animation: rond 2s infinite linear;
+        }
+        .icon-part{
+            opacity: 0.2;
+            left: 50%;
+        }
+        .descript{
+            font-size: 18px;
+            font-weight: 600;
+            top: 5px;
+            left: 5px;
+        }
+        .count{
+            font-size: 48px;
+            bottom: 10px;
+            right: 5px;
+        }
+    }
+    .server-summary{
+        background: #fff;
+        .key{
+            font-size: 12px;
+        }
+        .value{
+            font-size: 20px;
+        }
+    }
+}
+.orange{
+    background: #FF9A2A                    
+}
+.green{
+    background: #7FBC39                    
+}
+@media screen and(min-width:768px){
+    .status{
+        display: flex;
+        .absolute-pos{
+            position: relative;
+            div{
+                position: absolute;
+                color:#fff;
+            }
+            .icon-cog{
+                margin-left:-61px;
+            }
+            .icon-coffee{
+                margin-left:-75px;                        
+            }
+            .icon-part{
+                font-size: 144px;
+                opacity: 0.2;
+                left: 50%;
+            }
+        }
+    }
+    .status>div{
+        flex: 1;
+        height: 144px;
+    }
+    .status>div:not(:first-child){
+        margin-left: 10px
+    }
+}

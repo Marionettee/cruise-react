@@ -1,0 +1,9 @@
+export const CHANGE_HOME_DATA = 'home/CHANGE_HOME_DATA';
+export const ADD_ARTICLE_LIST = 'home/ADD_ARTICLE_LIST';
+export const TOGGLE_SCROLL_TOP = 'home/TOGGLE_SCROLL_TOP';
+export const SET_SERVER_LIST = 'agent/SET_SERVER_LIST';
+export const TOGGLE_DIALOG = 'agent/TOGGLE_DIALOG';
+export const CLOSE_DIALOG = 'agent/CLOSE_DIALOG';
+export const CLOSE_ALL_DIALOG = 'agent/CLOSE_ALL_DIALOG';
+export const CHANGE_TYPE = 'agent/CHANGE_TYPE';
+export const UPDATE_SERVER = 'agent/UPDATE_SERVER';

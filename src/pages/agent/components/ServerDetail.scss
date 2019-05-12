@@ -1,0 +1,114 @@
+.server-detail{
+    margin-top: 20px;
+    .server-action{
+        .res-change{
+            display: flex;
+            .del-ser{
+                display: inline-block;
+            }
+        }
+        .res-deny{
+            padding: 0px 10px;
+            height: 28px;
+            line-height: 28px;
+            background: #00B4CF;
+            color: #fff;
+            .icon-deny{
+                vertical-align: text-bottom;
+                margin-right: 10px;
+            }
+        }
+        .add-ser{
+            height: 24px;
+            margin-right: 10px;
+            .icon-plus{
+                color: #fff;                                
+            }
+        }
+        .add-ser>button{
+            width: 25px;
+            height: 25px;
+            background: #00B4CF;
+        }
+        .del-part{
+            flex: 1;
+            .del-ser{
+                background: #E1E4E6;
+                padding: 0 5px;
+                margin:0 10px 5px 0;
+                height: 25px;
+                line-height: 25px;
+                .icon-trash{
+                    margin-left: 5px;
+                    vertical-align: middle;
+                }
+            }
+        }
+        
+        .add-descript{
+            display: flex;
+            p{
+                padding-top: 15px;
+            }
+            div{
+                flex: 1;
+                text-align: right;
+            }
+        }
+    }
+}
+
+@media screen and(min-width:768px){
+    .server-detail{
+        display: flex;
+        background: #fff;
+        padding: 15px;
+        .server-side{
+            flex: 1;
+            padding: 0 15px;
+            .server-info{
+                margin-bottom: 30px;
+                .server-panel, .server-addr{
+                    height: 20px;
+                    line-height: 20px;
+                    .icon-desktop, .icon-info, .icon-folder {
+                        color: #e1e4e6;
+                        font-size: 20px;
+                        margin-right: 10px;
+                    }
+                    .server-name{
+                        color: #00B4CF;
+                    }
+                    .info{
+                        padding: 3px 5px;
+                        color: #fff;
+                        margin-left: 20px;
+                    }
+                    span{
+                        vertical-align: middle;
+                    }
+                }
+            }
+
+            .server-info>div{
+                margin-right: 15px;
+            }
+            .server-info>div,.add-ser{
+                display: inline-block;
+            }
+
+            .server-action{
+                display: flex;
+                .res-change{
+                    flex:1;
+                }
+            }
+            .add-input{
+                padding-left: 10px;
+                width: 100%;
+                box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.3);
+                height: 20px;
+            }
+        }
+    }  
+}
