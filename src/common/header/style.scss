@@ -29,7 +29,8 @@
                 height: 100%;
                 -webkit-box-pack: inherit;
                 display: flex;
-                padding-top: 10px;          
+                justify-content: center;
+                align-items: center;     
                 div{
                     display: inline-block;
                     width: 40px;
@@ -70,12 +71,17 @@
             }
         }
         .header-title{
-            padding-top: 10px;
             height: 60px;
             flex: 1;
             img{
                 width: 120px;
+                vertical-align: middle
             }
         }
+    }
+}
+@media screen and(min-width:1024px){
+    .menu-btn{
+        display: none !important;
     }
 }

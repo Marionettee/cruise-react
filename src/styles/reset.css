@@ -76,10 +76,10 @@ body{
   line-height: 1;
   -webkit-text-size-adjust: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  height: 100%
+  min-height: 100%
 }
 html, main{
-  height: 100%;
+  min-height: 100%;
   overflow-y: scroll;
 }
  
@@ -105,9 +105,7 @@ button{
   border: none;
   background: none;
 }
-#root{
-  height: 100%;
-}
+
 #root .main{
   padding-top: 60px;
 }

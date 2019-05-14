@@ -11,10 +11,12 @@ export const showMenu = () =>({
 	type: constants.SHOW_MENU
 }) 
 
-export const searchFocus = () => ({
-	type: constants.SEARCH_FOCUS
+export const showSideMenu = () => ({
+	type: constants.SHOW_SIDE_MENU
 });
-
+export const hideSideMenu = () => ({
+	type: constants.HIDE_SIDE_MENU
+});
 export const searchBlur = () => ({
 	type: constants.SEARCH_BLUR
 });

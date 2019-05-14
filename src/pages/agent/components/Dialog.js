@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import './Dialog.scss'
-import {actionCreators } from '../store'
+import {actionCreators} from '../store'
 import { connect } from 'react-redux';
 class Dialog extends PureComponent{
     constructor(){

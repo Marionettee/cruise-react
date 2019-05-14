@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { actionCreators } from './store';
 import { StatusUI } from './components/Status';
-import { SearchBar } from './components/SearchBar';
+import SearchBar from './components/SearchBar';
 import ServerList from './components/ServerList';
 import axios from 'axios';
 
@@ -23,11 +23,10 @@ class Agent extends PureComponent {
 		return <StatusUI buildingList = {buildingList.size} idleList = {idleList.size} physicalList = {physicalList.size} virtualList = {virtualList.size}/>
 	}
 	render() {
-		console.log(this.props.serverList)
 		return (
 			<div>
 				{this.filterServerList()}
-				<SearchBar selectedType = {this.props.selectedType} changeType = {this.changeType}/>
+				<SearchBar />
 				<ServerList />
 			</div>
 		)
@@ -70,7 +69,7 @@ const mapState = (state) => ({
 	idleList: state.getIn(['agent', 'idleList']),
 	virtualList: state.getIn(['agent', 'virtualList']),
 	physicalList: state.getIn(['agent', 'physicalList']),
-	selectedType: state.getIn(['agent', 'selectedType'])
+	
 })
 const mapDispatch = (dispatch) => ({
 	setServerList(data){
@@ -81,9 +80,6 @@ const mapDispatch = (dispatch) => ({
 	},
 	closeAllDialog() {
 		dispatch(actionCreators.closeAllDialog());
-	},
-	changeType(type){
-		dispatch(actionCreators.changeType(type));
 	}
 });
 

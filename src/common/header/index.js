@@ -17,7 +17,7 @@ class Header extends Component {
 			<div className="header">
 				<div className="header-body middle">
 					<div className="menu">
-						<div className="menu-btn" onClick={()=>showMenu()}>
+						<div className="menu-btn" onClick={this.props.showSideMenu}>
 							<span className="icon-navicon"></span>  
 						</div>
 					</div>
@@ -45,6 +45,9 @@ class Header extends Component {
 			</div>
 		);
 	}
+	showSideMenu(){
+		this.props.showSideMenu();
+	}
 }
 
 const mapStateToProps = (state) => {
@@ -60,9 +63,8 @@ const mapStateToProps = (state) => {
 
 const mapDispathToProps = (dispatch) => {
 	return {
-		handleInputFocus(list) {
-			(list.size === 0) && dispatch(actionCreators.getList());
-			dispatch(actionCreators.searchFocus());
+		showSideMenu(){
+			dispatch(actionCreators.showSideMenu());
 		},
 		handleInputBlur() {
 			dispatch(actionCreators.searchBlur());

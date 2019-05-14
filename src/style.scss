@@ -4,12 +4,21 @@
     background: #EFEFEF;
     color: #2D4054;
     min-height: 100%;
+    position: relative;
     .main{
         max-width:1200px; 
         margin:0 auto;
         padding: 60px 0 20px;
-        .main-panel{
-            padding: 20px 20px 20px 270px;
-        }
+        
+    }
+}
+@media screen and(min-width:1024px){
+    .main-panel{
+        padding: 20px 20px 20px 270px;
+    }
+}
+@media screen and(max-width:1024px){
+    .main-panel{
+        padding: 20px 20px 20px 20px;
     }
 }

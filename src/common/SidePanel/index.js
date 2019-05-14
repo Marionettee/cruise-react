@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 // import { CSSTransition } from 'react-transition-group';
 // import { actionCreators } from './store';
-// import { actionCreators as loginActionCreators } from '../../pages/login/store'
+import { actionCreators as headerActionCreators } from '../header/store'
 import './style.scss'
 class SidePanel extends Component {
 	constructor(
@@ -17,11 +17,10 @@ class SidePanel extends Component {
 	render() {
         console.log(this.props)
 		return (
-			<div className="side-panel"> 
-			{/* [ngClass]="{'MenuAnimation' : showMenu}" */}
+			<div className={`side-panel ${this.props.showSideMenu?'MenuAnimation':null}`}>
             <div className="side-wrap">
                 <div className="close-btn">
-                    <span className="icon-close blue-action fs20"></span>
+                    <span className="icon-close blue-action fs20" onClick={this.props.hideSideMenu}></span>
                     {/* onClick="showMenu=false" */}
                 </div>
                 <ul className="menu-list">
@@ -56,51 +55,15 @@ class SidePanel extends Component {
 
 
 
-// const mapStateToProps = (state) => {
-// 	return {
-// 		focused: state.getIn(['header', 'focused']),
-// 		list: state.getIn(['header', 'list']),
-// 		page: state.getIn(['header', 'page']),
-// 		totalPage: state.getIn(['header', 'totalPage']),
-// 		mouseIn: state.getIn(['header', 'mouseIn']),
-// 		login: state.getIn(['login', 'login'])
-// 	}
-// }
+const mapState = (state) => ({
+	showSideMenu: state.getIn(['header', 'showSideMenu'])
+})
 
-// const mapDispathToProps = (dispatch) => {
-// 	return {
-// 		handleInputFocus(list) {
-// 			(list.size === 0) && dispatch(actionCreators.getList());
-// 			dispatch(actionCreators.searchFocus());
-// 		},
-// 		handleInputBlur() {
-// 			dispatch(actionCreators.searchBlur());
-// 		},
-// 		handleMouseEnter() {
-// 			dispatch(actionCreators.mouseEnter());
-// 		},
-// 		handleMouseLeave() {
-// 			dispatch(actionCreators.mouseLeave());
-// 		},
-// 		handleChangePage(page, totalPage, spin) {
-// 			let originAngle = spin.style.transform.replace(/[^0-9]/ig, '');
-// 			if (originAngle) {
-// 				originAngle = parseInt(originAngle, 10);
-// 			}else {
-// 				originAngle = 0;
-// 			}
-// 			spin.style.transform = 'rotate(' + (originAngle + 360) + 'deg)';
+const mapDispath = (dispatch) => ({
+    hideSideMenu(){
+        dispatch(headerActionCreators.hideSideMenu());
+    }
 
-// 			if (page < totalPage) {
-// 				dispatch(actionCreators.changePage(page + 1));
-// 			}else {
-// 				dispatch(actionCreators.changePage(1));
-// 			}
-// 		},
-// 		logout() {
-// 			dispatch(loginActionCreators.logout())
-// 		}
-// 	}
-// }
+})
 
-export default connect()(SidePanel);
+export default connect(mapState,mapDispath)(SidePanel);

@@ -17,11 +17,18 @@ class ServerList extends PureComponent {
                 return <ServerDetail key={index} server={server}/>
             })
         }else if(this.props.selectedType === 'physical'){
-            return this.props.physicalList.toJS().map((server,index)=>{
+            let physicalList = this.props.serverList.toJS().filter((server)=>{
+                return server.type === 'physical';
+            });
+            return physicalList.map((server,index)=>{
                 return <ServerDetail key={index} server={server}/>
             })
         }else if(this.props.selectedType === 'virtual'){
-            return this.props.virtualList.toJS().map((server,index)=>{
+            let virtualList = this.props.serverList.toJS().filter((server)=>{
+                return server.type === 'virtual';
+            });
+            console.log(virtualList)
+            return virtualList.map((server,index)=>{
                 return <ServerDetail key={index} server={server}/>
             })
         }

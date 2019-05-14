@@ -1,3 +1,23 @@
+@keyframes rond{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);        
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes rond{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);        
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
 .status{
     display: flex;
     .absolute-pos{
@@ -42,6 +62,41 @@
 .green{
     background: #7FBC39                    
 }
+@media screen and(min-width:1200px){
+    .server-summary{
+        display: flex;
+        background: #fff;
+        .server-type{
+            text-align: center;
+            padding: 30px 10px;
+            flex: 1;
+            .key{
+                font-size: 12px;
+                height: 80%;
+            }
+            .value{
+                font-size: 20px;
+            }
+        }
+    }
+}
+@media screen and(min-width:768px) and (max-width:1200px){
+    .server-summary{
+        display: block;
+        .server-type{
+            display: flex;
+            height: 48px;
+            line-height: 48px;                    
+        }
+        .key,.value{
+            flex: 1;
+            padding:0 15px;
+        }
+        .value{
+            text-align: right;
+        }
+    }
+}
 @media screen and(min-width:768px){
     .status{
         display: flex;
@@ -70,5 +125,24 @@
     }
     .status>div:not(:first-child){
         margin-left: 10px
+    }
+}
+@media screen and(max-width:768px){
+    .server-summary{
+        width: 100%;
+        margin-top: 10px;
+        padding: 20px 10px;
+        display: flex;
+        .server-type{
+            text-align: center;
+            flex: 1;
+            .key{
+                font-size: 12px;
+                padding-bottom: 10px
+            }
+            .value{
+                font-size: 20px;
+            }
+        }
     }
 }

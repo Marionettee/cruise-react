@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { Route, Redirect, Switch, HashRouter } from 'react-router-dom';
 import Header from './common/header';
 import SidePanel from './common/SidePanel';
+import {Footer} from './common/footer';
 import Dashboard from './pages/dashboard';
 import Help from './pages/help';
 import MyCruise from './pages/myCruise';
@@ -35,7 +36,7 @@ class App extends Component {
                 </Switch>
               </div>              
             </div>
-      			{/* <Footer /> */}
+      			<Footer />
       		</div>
       	</HashRouter>
       </Provider>

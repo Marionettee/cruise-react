@@ -1,3 +1,21 @@
+@keyframes rollin{
+    from{
+        left: -250px;          
+    }
+    to{
+        left: 0px;  
+        
+    }
+}
+@-webkit-keyframes rollin{
+    from{
+        left: -250px;  
+    }
+    to{
+        left: 0px;  
+        
+    }
+}
 .side-panel{
     width: 250px;
     position: fixed;
@@ -46,4 +64,25 @@
 .menu-select{
     color: #00B4CF;
     background: #435466;
+}
+.blue-action{
+    color: #00B4CF
+}
+@media screen and(min-width:768px) and (max-width:1024px){
+    .side-panel{
+        left: -250px;
+        top: 0;
+        z-index: 110;
+    }
+    .MenuAnimation{
+        left: 0px;
+        animation: rollin 0.2s infinite linear;
+        -webkit-animation: rollin 0.2s infinite linear;
+        animation-iteration-count:1
+    }
+    .close-btn{
+        padding: 15px;
+        text-align: right;
+    }
+    
 }
