@@ -17,8 +17,13 @@
         padding: 20px 20px 20px 270px;
     }
 }
-@media screen and(max-width:1024px){
+@media screen and(min-width:768px) and(max-width:1024px){
     .main-panel{
         padding: 20px 20px 20px 20px;
+    }
+}
+@media screen and(max-width:768px){
+    .main-panel{
+        padding: 0 5px;
     }
 }

@@ -103,12 +103,53 @@
                     flex:1;
                 }
             }
-            .add-input{
-                padding-left: 10px;
-                width: 100%;
-                box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.3);
-                height: 20px;
-            }
         }
     }  
+}
+@media screen and(max-width:768px){
+    .server-detail{
+        .os-type{
+            display: none
+        }
+        .server-side{
+            padding: 10px 15px;
+            background: #fff;
+            .info{
+                display: none;
+            }
+            .server-panel {
+                .icon-desktop{
+                    margin-right: 10px;
+                }
+                .server-name{
+                    color: #00B4CF;
+                }
+            }
+        }
+        .server-info>div{
+            padding-bottom: 5px;
+        }
+        .bdl-green{
+            border-left: 3px solid #7FBC39;
+        }
+        .bdl-orange{
+            border-left: 3px solid #FF9A2A;                  
+        }
+        .server-addr{
+            padding: 0;
+            .icon-info,.icon-folder{
+                margin-right: 10px;
+            }
+        }
+
+        .deny-wrap{
+            text-align: right;
+            .res-deny{
+                display: inline-block;
+            }
+        }
+    }
+    .server-detail:last-child{
+        margin-bottom: 20px;
+    }
 }

@@ -61,6 +61,7 @@
                 position: absolute;
                 top: 6px;
                 left: 10px;
+                font-size:20px;
             }
             input{
                 width: 100%;
@@ -80,5 +81,27 @@
         .layout{
             display: none
         }
+        
     }
+    .status{
+        flex-wrap: wrap;
+        padding-top: 10px;
+        .absolute-pos{
+            width: 49%;
+            height: 100px;
+            .icon-part{
+                font-size: 100px
+            }
+            .icon-cog{
+                margin-left:-43px;
+            }
+            .icon-coffee{
+                margin-left:-52px;                        
+            }
+        }
+        .absolute-pos:first-child{
+            margin-right: 2%;
+        }
+    }
+    
 }

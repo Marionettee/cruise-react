@@ -1,65 +1,114 @@
-.dialog-mx{
-    position: relative;
+@media screen and (max-width:768px){
     .dialog-main{
-        position: absolute;
-        width: 570px;
+        width: 100%;
+        margin-top: 40%;
+        .cancel{
+            display: none;
+        }
+        .add-submit{
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width:1024px){
+    .dialog-mx {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        top: 0;
+        left: 0;
+        z-index: 200;
+        .dialog-main{
+            position: initial;
+        }
+    }
+}
+@media screen and(min-width:768px) and (max-width:1024px){
+    .dialog-mx {
+        .dialog-main{
+            width: 570px;
+            margin: 40% auto;
+        }
+    }
+    
+}
+@media screen and (min-width:1024px){
+    .dialog-mx{
+        position: relative;
+        .dialog-main{
+            position: absolute;
+            width: 570px;
+            .dialog-bottom{
+                top: 15px;
+                box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+            }
+            .dialog-top{
+                top: -165px;
+                box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+            }
+            .dialog-bottom:before,.dialog-bottom:after,.dialog-top:before,.dialog-top:after{
+                position: absolute;                                    
+                content: "";
+                width: 0;
+                height: 0;
+            }
+            .dialog-bottom:before{
+                left: 5px;
+                top: -10px;
+                border-bottom: 10px solid #00B4CF;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+            }
+            .dialog-bottom:after{
+                left: 6px;
+                top: -8px;
+                border-bottom: 9px solid #fff;
+                border-left: 9px solid transparent;
+                border-right: 9px solid transparent;
+            }
+            .dialog-top:before{
+                left: 5px;
+                top: 124px;
+                border-top: 10px solid #00B4CF;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+            }
+            .dialog-top:after{
+                left: 6px;
+                top: 123px;
+                border-top: 9px solid #fff;
+                border-left: 9px solid transparent;
+                border-right: 9px solid transparent;
+            }
+        }
+    }
+}
+.add-input{
+    padding-left: 10px;
+    width: 100%;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.3);
+    height: 20px;
+}
+.dialog-mx{
+    .dialog-main{
+        padding: 10px;
         background: #fff;
         border: 1px solid #00B4CF;
         button{
             width: 110px;
             text-align: center;
-            margin: 10px;
             padding: 0 10px;
             height: 35px;
             line-height: 35px;
             color:#fff;
+            margin-right: 10px;
         }
     }
     .dialog-main>div{
-        padding: 10px 10px 0;
+        margin-bottom: 10px;
     }
-    .dialog-bottom{
-        top: 15px;
-        box-shadow: 0 3px 5px rgba(0,0,0,0.3);
-    }
-    .dialog-top{
-        top: -165px;
-        box-shadow: 0 3px 5px rgba(0,0,0,0.3);
-    }
-    .dialog-bottom:before,.dialog-bottom:after,.dialog-top:before,.dialog-top:after{
-        position: absolute;                                    
-        content: "";
-        width: 0;
-        height: 0;
-    }
-    .dialog-bottom:before{
-        left: 5px;
-        top: -10px;
-        border-bottom: 10px solid #00B4CF;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-    }
-    .dialog-bottom:after{
-        left: 6px;
-        top: -8px;
-        border-bottom: 9px solid #fff;
-        border-left: 9px solid transparent;
-        border-right: 9px solid transparent;
-    }
-    .dialog-top:before{
-        left: 5px;
-        top: 124px;
-        border-top: 10px solid #00B4CF;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-    }
-    .dialog-top:after{
-        left: 6px;
-        top: 123px;
-        border-top: 9px solid #fff;
-        border-left: 9px solid transparent;
-        border-right: 9px solid transparent;
-    }
+    
 }
 .add-submit{
     background:#00B4CF;

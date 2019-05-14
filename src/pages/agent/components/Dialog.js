@@ -25,8 +25,10 @@ class Dialog extends PureComponent{
                         <input className="add-input" placeholder="e.g. Chrome,Firefox" type="text"
                         defaultValue = {this.state.addBar} onChange={this.changeValue}/>
                     </div>
-                    <button className="add-submit" onClick={this.addResources}>add resources</button>
-                    <button className="cancel" onClick={this.closeDialog}>cancel</button>
+                    <div className="btn-div">
+                        <button className="add-submit" onClick={this.addResources}>add resources</button>
+                        <button className="cancel" onClick={this.closeDialog}>cancel</button>
+                    </div>
                 </div>
             </div>
         )
