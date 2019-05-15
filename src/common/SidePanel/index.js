@@ -15,13 +15,11 @@ class SidePanel extends Component {
         }
 	}
 	render() {
-        console.log(this.props)
 		return (
 			<div className={`side-panel ${this.props.showSideMenu?'MenuAnimation':null}`}>
             <div className="side-wrap">
                 <div className="close-btn">
                     <span className="icon-close blue-action fs20" onClick={this.props.hideSideMenu}></span>
-                    {/* onClick="showMenu=false" */}
                 </div>
                 <ul className="menu-list">
                     <Link to='/dashboard'><li className={this.state.pathName === '/dashboard'?'menu-select':''}><span className="icon-dashboard fs20"></span>DASHBOARD</li></Link>
