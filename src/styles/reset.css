@@ -76,13 +76,10 @@ body{
   line-height: 1;
   -webkit-text-size-adjust: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  min-height: 100%
+  /* min-height: 100%; */
+  height:100%;
 }
-html, main{
-  min-height: 100%;
-  overflow-y: scroll;
-}
- 
+
 /*清除浮动*/
 .clearfix:before,
 .clearfix:after{
@@ -105,7 +102,14 @@ button{
   border: none;
   background: none;
 }
-
+#root{
+  height: 100%;
+  overflow-y: scroll;
+}
 #root .main{
   padding-top: 60px;
 }
+html, main{
+  height: 100%;
+}
+ 

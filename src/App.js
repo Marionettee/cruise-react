@@ -22,7 +22,7 @@ class App extends Component {
     return (
     	<Provider store={store}>
       	<HashRouter>
-      		<div className="page">
+          <div className="page">
             <Header />
             <div className="main">
               <SidePanel pathName={this.state.pathName}/>
