@@ -33,6 +33,7 @@ class Agent extends PureComponent {
 	}
 	componentDidMount() {
 		this.getServerList();
+		//todo -click empty to close dialog
 		// document.body.addEventListener('click', (e) => {
 		// 	this.props.closeAllDialog();
 		// });

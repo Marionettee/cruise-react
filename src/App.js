@@ -12,12 +12,6 @@ import store from './store';
 import './style.scss'
 
 class App extends Component {
-  constructor(){
-    super();
-    this.state={
-      pathName : window.location.pathname
-    }
-  }
   render() {
     return (
     	<Provider store={store}>
@@ -25,7 +19,7 @@ class App extends Component {
           <div className="page">
             <Header />
             <div className="main">
-              <SidePanel pathName={this.state.pathName}/>
+              <SidePanel />
               <div className="main-panel">
                 <Switch>
                   <Route path='/dashboard' exact component={Dashboard}></Route>
